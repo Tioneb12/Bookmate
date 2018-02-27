@@ -3,5 +3,5 @@ search_book = document.getElementById("book-results");
 //pour chaque book de @books
 <% @books.each do |book| %>
   // append le partial du book
-  search_book.insertAdjacentHTML("beforeend", "<%= j render 'books/book' %>");
+  search_book.insertAdjacentHTML("beforeend", "<%= j render 'books/book', book: book %>");
 <%end%>
