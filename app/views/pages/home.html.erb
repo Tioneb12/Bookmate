@@ -1,16 +1,6 @@
-<div class="container1">
-<h1>Pages#home</h1>
-<h2>livres</h2>
-<h3>test</h3>
-<p>Find me in app/views/pages/home.html.erb</p>
-</div>
-<div class="container2">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sed dolor tenetur, dolorum harum accusantium! Dolor magnam rerum ad iste ex tempore similique autem ut reprehenderit id, perspiciatis culpa voluptatum.</div>
-</div>
+<%= render 'books/search'  %>
 
-
-<% Book.all.each do |book| %>
-  <%= image_tag book.cover_url %>
-  <h1><%= book.title %></h1>
-  <p><%= book.author %></p>
-<% end %>
+<div class="container">
+  <div id="book-results">
+  </div>
+</div>

@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :users, only: [:index, :show]
-  post '/books/:google_books_id/readings', to: 'readings#create', as: :book_readings
+
+  resources :books, param: :google_books_id, only: [] do
+    resources :readings, only:[:create]
+    collection do
+      post :search
+    end
+  end
 
 end
