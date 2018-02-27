@@ -1,5 +1,5 @@
-<%= image_tag book.cover_url %>
-<%= book.google_books_id %>
+<%= image_tag book.cover_url if book.cover_url %>
+
 <%= book.title %>
 <%= book.author %>
 <hr>
