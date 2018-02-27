@@ -1,0 +1,4 @@
+<%= simple_form_for(:search, url: search_books_path, remote: true) do |f| %>
+  <%=f.input :query %>
+  <%=f.button :submit  %>
+<% end %>

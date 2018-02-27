@@ -1,0 +1,7 @@
+// choper le container des books
+search_book = document.getElementById("book-results");
+//pour chaque book de @books
+<% @books.each do |book| %>
+  // append le partial du book
+  search_book.insertAdjacentHTML("beforeend", "<%= j render 'books/book' %>");
+<%end%>
