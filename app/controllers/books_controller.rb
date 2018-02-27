@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  skip_before_action :authenticate_user!
   def search
     reponse = RestClient.get("https://www.googleapis.com/books/v1/volumes?q=#{params.dig(:search, :query)}")
     parsed_books = JSON.parse(reponse.body)
