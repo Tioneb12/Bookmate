@@ -1,0 +1,18 @@
+<div class="row">
+   <% @users.find_each(:batch_size => 5) do |user| %>
+    <div class="list-user">
+      <%= link_to user_path(user.id) do %>
+        <div class="info-profil col-lg-4">
+          <img src= "http://www.drodd.com/images14/black11.jpg" class= "avatar-list-user" >
+          <%#= image_tag user.avatar, class: "avatar-list-user" %>
+          <h4><%= "#{user.last_name}  #{user.first_name}" %></h4>
+          <p class="bio-user"><%#= user.bio %></p>
+          <p><%= user.email %></p>
+        </div>
+      <% end %>
+      <div class="book-recommendation col-lg-8">
+
+      </div>
+    </div>
+  <% end %>
+</div>
