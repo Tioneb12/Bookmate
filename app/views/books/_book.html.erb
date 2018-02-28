@@ -5,11 +5,10 @@
   <div class="book-brackground">
     <!-- <i class="fas fa-minus-circle"></i> -->
     <!-- <i class="fas fa-check-circle"></i> -->
-    <i class="fas fa-plus-circle"></i>
+    <%= link_to "", book_readings_path(book.google_books_id), remote: true, class: "fas fa-plus-circle", method: "post" %>
     <div class="book-info">
       <h4><%= book.title %></h4>
       <p><%= book.author %></p>
-       <%= link_to "+", book_readings_path(book.google_books_id), remote: true, class: "card-link btn-treehouse text-center", method: "post" %>
     </div>
   </div>
 </div>
