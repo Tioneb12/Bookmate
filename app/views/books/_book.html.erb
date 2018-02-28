@@ -1,5 +1,17 @@
-<%= image_tag book.cover_url if book.cover_url %>
 
-<%= book.title %>
-<%= book.author %>
-<hr>
+<div class="book col-xs-6 col-md-3 col-lg-2">
+  <div class="top">
+    <%= image_tag book.cover_url, class: "cover-book" %>
+  </div>
+  <div class="book-brackground">
+    <!-- <i class="fas fa-minus-circle"></i> -->
+    <!-- <i class="fas fa-check-circle"></i> -->
+    <i class="fas fa-plus-circle"></i>
+    <div class="book-info">
+      <h4><%= book.title %></h4>
+      <p><%= book.author %></p>
+    </div>
+  </div>
+</div>
+
+
