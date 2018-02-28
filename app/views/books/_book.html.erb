@@ -1,5 +1,15 @@
-<%= image_tag book.cover_url if book.cover_url %>
-
-<%= book.title %>
-<%= book.author %>
-<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <!-- insert <div class="card"> -->
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));">
+          <div class="card-description">
+            <h2><%= book.title %></h2>
+            <p><%= book.author %></p>
+          </div>
+          <img class="card-user" src=" <%= image_url book.cover_url if book.cover_url %>">
+         <a href="#" class="card-link btn-treehouse text-center">+</a>
+        </div>
+    </div>
+  </div>
+</div>
