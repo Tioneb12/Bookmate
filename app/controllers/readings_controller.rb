@@ -1,13 +1,13 @@
 class ReadingsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def create
-
-    # session[:books] = []
+    @google_books_id = params[:book_google_books_id]
     # si je suis connecte
     if user_signed_in?
       # si le book nexiste pas
-      byebug
-      unless @book = Book.find_by(google_books_id: params[:book_google_books_id])
+      @book = Book.find_by(google_books_id: params[:book_google_books_id])
+      unless @book
         # aller chercher le book via lapi
         response = RestClient.get("https://www.googleapis.com/books/v1/volumes/#{params[:book_google_books_id]}")
         parsed_book = JSON.parse(response.body)
@@ -22,11 +22,10 @@ class ReadingsController < ApplicationController
         @book.save!
       end
         # create reading
-        @reading = current_user.readings.new(book: @book)
-
+        @reading = current_user.readings.create(book: @book)
     else
       # si le tableau de session books existe pas, le creer
-      unless session[:books].empty?
+      if session[:books].nil?
          session[:books] = []
       end
       # ajouter le google book id au tableau de session
