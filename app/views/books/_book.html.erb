@@ -8,8 +8,9 @@
             <p><%= book.author %></p>
           </div>
           <img class="card-user" src=" <%= image_url book.cover_url if book.cover_url %>">
-         <a href="#" class="card-link btn-treehouse text-center">+</a>
+         <%= link_to "+", book_readings_path(book.google_books_id), remote: true, class: "card-link btn-treehouse text-center", method: "post" %>
         </div>
     </div>
   </div>
 </div>
+
