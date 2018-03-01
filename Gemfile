@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'rest-client'
+gem 'simple_token_authentication', '~> 1.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
