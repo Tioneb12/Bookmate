@@ -1,6 +1,9 @@
 .stat {
-  // display: none;
+  display: none;
 }
 .stat-display {
   display: block;
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
 }

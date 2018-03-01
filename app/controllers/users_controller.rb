@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @users = User.all
+    if user_signed_in?
+      @users = User.limit(10)
+    else
+      @users = User.limit(10)
+    end
   end
 
   def show
