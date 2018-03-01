@@ -4,4 +4,9 @@
 <div class="container">
   <div id="book-results">
   </div>
+
+  <% if @readings.length >= 5 %>
+    <%= link_to "GO",  users_path, class: "btn btn-primary stat" %>
+  <% end %>
+
 </div>

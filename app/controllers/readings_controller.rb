@@ -29,7 +29,7 @@ class ReadingsController < ApplicationController
          session[:books] = []
       end
       # ajouter le google book id au tableau de session
-      session[:books] << params[:book_google_books_id]
+      @session[:books] << params[:book_google_books_id]
     end
 
   end
