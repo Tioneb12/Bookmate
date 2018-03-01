@@ -1,7 +1,25 @@
-Show users
+<div class="wrapper-show">
+  <div class= "row">
+    <div class="content-img col-md-3">
+      <%#= cl_image_tag @user.avatar, class: "avatar avatar-show" %>
+      <%= image_tag @user.avatar, class: "avatar avatar-show" %>
+    </div>
+    <div class="content-info col-md-9">
+      <h2> <%="#{ @user.last_name} #{@user.first_name}"%></h2>
+      <h4><%= @user.address %></h4>
+      <p ><%= @user.bio %></p>
+      <%= link_to "DISCUTER", users_path ,class: "btn btn-primary col-md-3"  %>
+    </div>
+  </div>
+  <div class="container">
+    <h2 class="color-section">Recommend</h2>
+    <div class= "row">
 
-<ul>
-  <li>><%#= @user.last_name %></li>
-  <li><%#= @user.first_name%></li>
-  <li><%#= @user.address %></li>
-</ul>
+    </div>
+    <h2 class="color-section">Library</h2>
+    <div class= "row">
+
+    </div>
+  </div>
+
+</div>
