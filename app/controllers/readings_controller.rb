@@ -25,9 +25,9 @@ class ReadingsController < ApplicationController
         @reading = current_user.readings.create(book: @book)
     else
       # si le tableau de session books existe pas, le creer
-      if session[:books].nil?
-         session[:books] = []
-      end
+      # if session[:books].nil?
+      #    session[:books] = []
+      # end
       # ajouter le google book id au tableau de session
       @session[:books] << params[:book_google_books_id]
     end
