@@ -5,3 +5,10 @@ result.classList.remove("fa-plus-circle");
 result.classList.add("fa-check-circle");
 
 
+var btnPath = document.getElementById("btn-path");
+
+
+  <% if (user_signed_in? && current_user.readings.count >= 5) || session[:books].count >= 5 %>
+       btnPath.classList.remove("stat");
+       btnPath.classList.add("stat-display");
+  <% end %>

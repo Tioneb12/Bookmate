@@ -2,6 +2,10 @@ class ReadingsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def create
+    @books = Book.all
+    user_id = current_user
+    @readings = Reading.where(["user_id = :user_id", {user_id: user_id}]).select(:book_id)
+
     @google_books_id = params[:book_google_books_id]
     # si je suis connecte
     if user_signed_in?
@@ -24,12 +28,8 @@ class ReadingsController < ApplicationController
         # create reading
         @reading = current_user.readings.create(book: @book)
     else
-      # si le tableau de session books existe pas, le creer
-      # if session[:books].nil?
-      #    session[:books] = []
-      # end
       # ajouter le google book id au tableau de session
-      @session[:books] << params[:book_google_books_id]
+      session[:books] << params[:book_google_books_id]
     end
 
   end
