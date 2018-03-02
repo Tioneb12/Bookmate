@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def index
     if user_signed_in?
-      @users = User.limit(10)
+      @users = current_user.matching_users
     else
       @users = User.limit(10)
     end

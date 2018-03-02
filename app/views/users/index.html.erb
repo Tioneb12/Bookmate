@@ -1,3 +1,5 @@
 <div class="container <%= 'blur' unless user_signed_in? %>" >
-  <%= render "layouts/list-user", users: @users %>
+  <div class="row">
+    <%= render collection: @users, partial: "users/user" %>
+  </div>
 </div>
