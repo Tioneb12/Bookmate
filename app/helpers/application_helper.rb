@@ -4,7 +4,7 @@ module ApplicationHelper
     if cover_url.present?
       image_tag cover_url, options
     else
-      image_tag "placeholder", options
+      image_tag "placeholder.jpg", options
     end
   end
 end
