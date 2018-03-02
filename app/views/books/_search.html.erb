@@ -1,4 +1,6 @@
-<%= simple_form_for(:search, url: search_books_path, remote: true) do |f| %>
-  <%=f.input :query, input_html: { class: 'special' }%>
-  <%=f.button :submit, button_html: { class: 'special' }  %>
-<% end %>
+<div class="row search-bar">
+  <%= simple_form_for(:search, url: search_books_path, remote: true) do |f| %>
+    <%=f.input :query, placeholder: "Qui se cache derrière votre livre préféré", input_html: { class: 'special col-sm-9' }%>
+    <%=f.button :submit,'Entrer des livres', button_html: { class: 'special-input  col-sm-3' } %>
+  <% end %>
+</div>
