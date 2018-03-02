@@ -17,9 +17,8 @@ class ReadingsController < ApplicationController
           cover_url:        parsed_book.dig("volumeInfo", "imageLinks", "thumbnail"),
           author:           parsed_book.dig("volumeInfo","authors", 0)
         })
-
         # creer l'instance de book et save
-        @book.save!
+        @book.save
       end
         # create reading
         @reading = current_user.readings.create(book: @book)
