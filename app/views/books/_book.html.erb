@@ -1,6 +1,6 @@
 <div class="book col-xs-6 col-md-3 col-lg-2" id="book-<%= book.google_books_id%>">
   <div class="top">
-    <%= image_tag book.cover_url, class: "cover-book" if book.cover_url.present? %>
+    <%= image_tag_or_default book.cover_url, class: "cover-book" %>
 
   </div>
   <div class="book-brackground">
