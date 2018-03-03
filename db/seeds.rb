@@ -87,14 +87,6 @@ User.create!(
   )
 
 User.create!(
-  first_name: "Zeller",
-  last_name: "Benoit",
-  address: "20 rue Binaud 33000 Bordeaux",
-  password: "123456",
-  email: "ben@yop.com"
-  )
-
-User.create!(
   first_name: "Boussardon",
   last_name: "Damien",
   address: "11 rue de la faincerie 33000 Bordeaux",
@@ -116,11 +108,6 @@ Reading.create!(
   )
 
 Reading.create!(
-  user_id: 3,
-  book_id: 2
-  )
-
-Reading.create!(
   user_id: 1,
   book_id: 4
   )
@@ -131,10 +118,6 @@ Reading.create!(
   )
 
 Reading.create!(
-  user_id: 3,
-  book_id: 5
-  )
-Reading.create!(
   user_id: 1,
   book_id: 6
   )
@@ -144,9 +127,4 @@ Reading.create!(
   book_id: 7
   )
 
-Reading.create!(
-  user_id: 3,
-  book_id: 8
-  )
 puts "Readings finished"
-
