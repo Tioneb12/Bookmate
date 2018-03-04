@@ -228,6 +228,8 @@ Reading.create!(
 Reading.create!(
   user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
   book_id: [2,5,8].sample
+  user_id: 1,
+  book_id: 4
   )
 
 Reading.create!(
@@ -241,7 +243,9 @@ Reading.create!(
   )
 Reading.create!(
   user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
-  book_id: [2,4].sample
+  book_id: [2,4].sample,
+  user_id: 1,
+  book_id: 6
   )
 
 Reading.create!(
@@ -254,4 +258,3 @@ Reading.create!(
   book_id: 12
   )
 puts "Readings finished"
-
