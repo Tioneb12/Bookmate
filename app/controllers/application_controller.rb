@@ -43,6 +43,6 @@
     end
     # empty sesion books
     session[:books] = []
-    puts "#{user.books.inspect}"
+
   end
 end
