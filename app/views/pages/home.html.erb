@@ -5,18 +5,14 @@
     <h6>Selectionne 5 livres et tu verras qui se cache derrière.</h6>
   </div>
 </div>
-
 <div class="container">
-  <div id="book-results">
-</div>
-
-<div id="display-none">
-  <%= render collection: @books, partial: "books/book" %>
-</div>
-
-<% if (user_signed_in? && current_user.readings.count >= 5) || session[:books].count >= 5 %>
-  <%= link_to "Aller voir les profils",  users_path, class: "btn btn-primary stat-display", id: "btn-path" %>
-<% else %>
-  <%= link_to "Aller voir les profils",  users_path, class: "btn btn-primary stat", id: "btn-path" %>
-<%end %>
+  <div id="book-results"></div>
+  <div id="display-none">
+    <%= render collection: @books, partial: "books/book" %>
+  </div>
+  <% if (user_signed_in? && current_user.readings.count >= 5) || session[:books].count >= 5 %>
+    <%= link_to "Aller voir les profils",  users_path, class: "btn btn-primary stat-display", id: "btn-path" %>
+  <% else %>
+    <%= link_to "Aller voir les profils",  users_path, class: "btn btn-primary stat", id: "btn-path" %>
+  <%end %>
 </div>
