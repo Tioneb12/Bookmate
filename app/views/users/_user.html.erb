@@ -8,5 +8,8 @@
       <p class="bio-user"><%#= user.bio %></p>
       <p><%= user.email %></p>
     </div>
+    <div class="col-lg-8 book-users-Index">
+      <%= render collection: user.books.limit(4), partial:'books/book', locals: { book_class: "col-md-3" } %>
+    </div>
   <% end %>
 </div>
