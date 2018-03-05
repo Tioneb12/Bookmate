@@ -5,6 +5,7 @@
 
   before_action :create_session_books
 
+
   def create_session_books
     # si le tableau de session books existe pas, le creer
     session[:books] = [] if session[:books].nil?
