@@ -1,0 +1,9 @@
+
+
+<!-- conversation_messages_path(params[:id]) -->
+
+
+<%= simple_form_for [@conversation,@message], :method => :post, remote: true do |f| %>
+  <%= f.input :body, as: :text  %>
+  <%= f.button :submit %>
+<% end %>
