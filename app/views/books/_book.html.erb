@@ -10,10 +10,6 @@
   </div>
   <div class="book-brackground">
 
-    <% if (session[:books] && session[:books].include?(book.google_books_id)) || (user_signed_in? && current_user.google_books_ids.include?(book.google_books_id)) %>
-      <i class="fas fa-check-circle"></i>
-    <% else %>
-    <%= link_to "", book_readings_path(book.google_books_id), remote: true, class: "fas fa-plus-circle", method: "post" %>
     <% unless local_assigns[:current_user_profile] %>
       <% if (session[:books] && session[:books].include?(book.google_books_id)) || (user_signed_in? && current_user.google_books_ids.include?(book.google_books_id)) %>
         <i class="fas fa-check-circle"></i>

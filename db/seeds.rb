@@ -147,7 +147,7 @@ User.create!(
   address:"84, avenue du Marechal Juin, 97450 SAINT-LOUIS",
   email: "Afrodille@got.com",
   password: "123456",
-  avatar: nil)
+  remote_avatar_url: "https://res.cloudinary.com/dhdjyebiv/image/upload/v1520005914/av.jpg")
 
 User.create!(
   first_name: "Collin",
@@ -155,15 +155,15 @@ User.create!(
   address:"41, rue du Fossé des Tanneurs, 83200 TOULON",
   email: "Gabrielle@got.com",
   password: "123456",
-  avatar: nil)
+  remote_avatar_url: "https://res.cloudinary.com/dhdjyebiv/image/upload/c_crop,g_face/v1520005909/av1.jpg")
 
 User.create!(
   first_name: "Corbin",
   last_name: "Favor",
-  address:"2, rue du Fossé des Tanneurs, 83200 TOULON",
+  address:"2, Cours balguerie stuttenberg, 33000 Bordeaux",
   email: "Favor@got.com",
   password: "123456",
-  avatar: nil)
+  remote_avatar_url: "https://res.cloudinary.com/dhdjyebiv/image/upload/c_thumb,g_face,h_250,w_250/v1520005904/av2.jpg")
 
 User.create!(
   first_name: "Lanoie",
@@ -171,7 +171,7 @@ User.create!(
   address:"72, Boulevard de Normandie, 92260 FONTENAY-AUX-ROSES",
   email: "Patricia@got.com",
   password: "123456",
-  avatar: nil)
+  remote_avatar_url: "https://res.cloudinary.com/dhdjyebiv/image/upload/v1520005893/av4.jpg")
 
 User.create!(
   first_name: "Labelle",
@@ -179,7 +179,7 @@ User.create!(
   address:"5 place Tartas, 33000 Bordeaux",
   email: "Maryse@got.com",
   password: "123456",
-  avatar: nil)
+  remote_avatar_url: "https://randomuser.me/api/portraits/women/0.jpg")
 
 User.create!(
   first_name: "Auger",
@@ -187,7 +187,7 @@ User.create!(
   address:"1 rue Binaud 33000 Bordeaux",
   email: "Inès@got.com",
   password: "123456",
-  avatar: nil)
+  remote_avatar_url: "https://randomuser.me/api/portraits/women/9.jpg")
 
 User.create!(
   first_name: "Beauchamp",
@@ -195,7 +195,7 @@ User.create!(
   address:"13 Place de la victoire 33000 Bordeaux",
   email: "Yolette@got.com",
   password: "123456",
-  avatar: nil)
+  remote_avatar_url: "https://randomuser.me/api/portraits/women/24.jpg")
 
 User.create!(
   first_name: "Monrency",
@@ -203,7 +203,23 @@ User.create!(
   address:"25 place Tartas 33000 Bordeaux",
   email: "Georgette@got.com",
   password: "123456",
-  avatar: nil)
+  remote_avatar_url: "https://randomuser.me/api/portraits/women/85.jpg")
+
+User.create!(
+  first_name: "Quinn",
+  last_name: "Emmeline",
+  address:"25 place Tartas 33000 Bordeaux",
+  email: "Emmeline@got.com",
+  password: "123456",
+  remote_avatar_url: "https://randomuser.me/api/portraits/women/50.jpg")
+
+User.create!(
+  first_name: "Bousquet",
+  last_name: "Pauline",
+  address:"cours emile counord, 33000 Bordeaux",
+  email: "Pauline@got.com",
+  password: "123456",
+  remote_avatar_url: "https://randomuser.me/api/portraits/women/62.jpg")
 
 
 puts "User finished"
@@ -211,7 +227,7 @@ puts "User finished"
 puts "Create readings"
 
 Reading.create!(
-  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
+  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].sample,
   book_id: [2,4,6,7].sample
   )
 
@@ -228,8 +244,7 @@ Reading.create!(
 Reading.create!(
   user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
   book_id: [2,5,8].sample
-  user_id: 1,
-  book_id: 4
+
   )
 
 Reading.create!(
@@ -244,8 +259,6 @@ Reading.create!(
 Reading.create!(
   user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
   book_id: [2,4].sample,
-  user_id: 1,
-  book_id: 6
   )
 
 Reading.create!(
@@ -256,5 +269,10 @@ Reading.create!(
 Reading.create!(
   user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
   book_id: 12
+  )
+
+Reading.create!(
+  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
+  book_id: [5,2,9,13].sample
   )
 puts "Readings finished"

@@ -20,6 +20,7 @@ gem 'rest-client'
 gem 'kaminari'
 gem 'cloudinary'
 gem "geocoder"
+gem 'carrierwave', '~> 1.2'
 
 
 group :development do

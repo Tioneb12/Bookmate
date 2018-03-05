@@ -1,8 +1,10 @@
 <div class="wrapper-show">
   <div class= "row">
     <div class="content-img col-md-4">
-      <%#= cl_image_tag @user.avatar, class: "avatar avatar-show" %>
+      <%= cl_image_tag @user.avatar, class: "avatar avatar-show" %>
       <%#= image_tag @user.avatar, class: "avatar avatar-show" %>
+      <%#= cl_image_tag("av.jpg",
+      width: 400, height: 300, crop: :fill) %>
     </div>
     <div class="content-info col-md-8">
       <h2> <%="#{ @user.last_name} #{@user.first_name}"%></h2>
