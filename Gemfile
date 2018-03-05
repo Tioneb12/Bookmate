@@ -19,6 +19,7 @@ gem 'webpacker'
 gem 'rest-client'
 gem 'kaminari'
 gem 'cloudinary'
+gem "geocoder"
 
 
 group :development do
