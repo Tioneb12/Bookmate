@@ -1,6 +1,6 @@
-<div class="row search-bar">
+<div class="search-bar">
   <%= simple_form_for(:search, url: search_books_path, remote: true) do |f| %>
-    <%=f.input :query, placeholder: "Entrer un titre, un auteur", input_html: { class: 'special col-sm-9' }%>
-    <%=f.button :submit,'Rechercher', button_html: { class: 'special-input  col-sm-3' } %>
+    <%=f.input :query, placeholder: "Entrer un titre, un auteur", input_html: { class: 'special' }%>
+    <%=f.button :submit,'Rechercher', button_html: { class: 'special-input ' } %>
   <% end %>
 </div>

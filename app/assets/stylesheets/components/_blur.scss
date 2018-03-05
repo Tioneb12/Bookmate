@@ -1,6 +1,9 @@
 .blur {
   filter: blur(7px);
 }
+.no-display{
+  display: none;
+}
 .no-log {
   text-align: center;
   top: 10vh;
@@ -11,12 +14,22 @@
   height: 80vh;
   background-color:rgba(243, 243, 243, 0.9);
   border-radius: 3px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21)
-}
-.no-log h1{
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);
+  h1{
     margin: 20vh 10vw 0 10vw ;
-}
-.no-log .btn{
+  }
+  .btn{
     margin-top: 10vh;
     font-weight: bold;
+  }
+}
+@media screen and (max-width: 699px){
+  .no-log h1{
+    font-size: 1.8em
+  }
+}
+@media screen and (max-width: 400px){
+  .no-log h1{
+    font-size: 1.3em
+  }
 }

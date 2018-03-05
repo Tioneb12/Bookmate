@@ -1,22 +1,19 @@
 .search_query label{
   display:none;
 }
-.search-bar {
-  // margin-top: 40px;
-  // margin-bottom: 40px;
+.search_query{
+  width: 100%;
 }
 .search-bar  #search_query{
   height: 39.5px;
-  width: 85%;
+  width: 100%;
   color: #000000;
   border-radius: 0px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-
+  margin: 0;
 }
-
 .search-bar .special-input{
-  width: 75%;
   height: 39px;
 }
 .search-bar .btn-default {
@@ -30,5 +27,15 @@
 }
 .search-bar .form-control {
   border: 1px solid $blue;
-
+}
+.search-bar .simple_form{
+  width: 85%;
+  display: inline-flex;
+}
+.search-bar .form-group{
+  margin:0;
+  width: 85%;
+}
+.seaech-bar data-disable-with{
+ display:none;
 }
