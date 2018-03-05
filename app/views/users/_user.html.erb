@@ -1,4 +1,5 @@
-<div class="list-user">
+
+<div class="list-user row">
   <%= link_to user_path(user.id) do %>
     <div class="info-profil col-lg-4">
       <img src= "http://www.drodd.com/images14/black11.jpg" class= "avatar-list-user" >
@@ -10,8 +11,9 @@
 
       <strong>Distance: <%= Geocoder::Calculations.distance_between(user, current_user).round(2)%> Km</strong>
     </div>
-    <div class="col-lg-8 book-users-Index">
+    <div class="col-lg-8 book-users-Index hidden-xs hidden-sm">
       <%= render collection: user.books.limit(4), partial:'books/book', locals: { book_class: "col-md-3" } %>
     </div>
   <% end %>
+</div>
 </div>
