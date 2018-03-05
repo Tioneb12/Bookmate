@@ -19,7 +19,7 @@
     </div>
     <h2 class="color-section">Library</h2>
     <div class= "row">
-        <%= render collection: @user.books, partial:'books/book' %>
+        <%= render collection: @user.books, partial:'books/book', locals: { current_user_profile: @user == current_user } %>
     </div>
   </div>
 
