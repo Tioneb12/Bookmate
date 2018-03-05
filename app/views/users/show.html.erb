@@ -10,17 +10,15 @@
       <p ><%= @user.bio %></p>
       <%= link_to "DISCUTER", users_path ,class: "btn btn-primary col-md-3"  %>
     </div>
-
   </div>
   <div class="container">
-    <h2 class="color-section">Recommend</h2>
+    <h2 class="color-section">Recommend</h2><hr>
     <div class= "row">
-
+      <%= render collection: @user.books - current_user.books, partial:'books/book' %>
     </div>
-    <h2 class="color-section">Library</h2>
+    <h2 class="color-section">Library</h2><hr>
     <div class= "row">
         <%= render collection: @user.books, partial:'books/book', locals: { current_user_profile: @user == current_user } %>
     </div>
   </div>
-
 </div>
