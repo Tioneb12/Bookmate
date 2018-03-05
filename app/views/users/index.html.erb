@@ -1,4 +1,4 @@
-<div class="<%= 'no-log' unless user_signed_in? %>">
+<div class="<%= 'no-display' if user_signed_in? %> <%= 'no-log' unless user_signed_in? %>">
   <h1>Connecte-toi pour voir tout les profils correspondants</h1>
   <%= link_to "log in", new_user_session_path, class: "btn btn-primary "%>
 </div>
