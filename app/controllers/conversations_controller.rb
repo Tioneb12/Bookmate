@@ -1,6 +1,5 @@
 class ConversationsController < ApplicationController
 
-
   def create
     @conversation = Conversation.new(recipient: current_user, sender_id: params[:user_id])
     @conversation.save
@@ -10,8 +9,9 @@ class ConversationsController < ApplicationController
   end
 
   def show
-    @conversation = Conversation.find(params[:id])
+    # @messages = Message.all
+    @message = Message.new
     @messages = Message.all
+    @conversation = Conversation.find(params[:id])
   end
-
 end

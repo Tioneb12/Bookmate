@@ -3,7 +3,6 @@
     book_class = "col-md-3 col-sm-6 col-lg-2"
   end
 %>
-
 <div class="book <%= book_class %>" id="book-<%= book.google_books_id%>">
   <div class="top">
     <%= image_tag_or_default book.cover_url, class: "cover-book" %>
@@ -14,14 +13,13 @@
       <i class="fas fa-check-circle"></i>
     <% else %>
     <%= link_to "", book_readings_path(book.google_books_id), remote: true, class: "fas fa-plus-circle", method: "post" %>
-     <% end %>
+    <% end %>
     <% unless local_assigns[:current_user_profile] %>
       <% if (session[:books] && session[:books].include?(book.google_books_id)) || (user_signed_in? && current_user.google_books_ids.include?(book.google_books_id)) %>
         <i class="fas fa-check-circle"></i>
       <% else %>
         <%= link_to "", book_readings_path(book.google_books_id), remote: true, class: "fas fa-plus-circle", method: "post" %>
       <% end %>
-
     <% end %>
     <div class="book-info">
       <h4><%= book.title %></h4>

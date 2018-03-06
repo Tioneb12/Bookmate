@@ -1,9 +1,11 @@
-
-
-<!-- conversation_messages_path(params[:id]) -->
-
-
-<%= simple_form_for [@conversation,@message], :method => :post, remote: true do |f| %>
-  <%= f.input :body, as: :text  %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <div class="message">
+    <%= render collection: @messages, partial: "messages/message" %>
+  </div>
+  <div class="form">
+    <%= simple_form_for [@conversation,@message], :method => :post, remote: true do |f| %>
+      <%= f.input :body, as: :text, id: 'text_message'  %>
+      <%= f.button :submit, id: 'send' %>
+    <% end %>
+  </div>
+</div>

@@ -1,24 +1,20 @@
 class MessagesController < ApplicationController
 
   def create
-    raise
-    # @conversation = Conversation.find(params[:id])
-    # récupérer conversation id
-
+    @conversation = Conversation.find(params[:conversation_id])
     @message = @conversation.messages.new(message_params)
+    @message.user = current_user
     @message.save
-    # @message = Message.find(params[:id])
-    # @message = Message.new(message_params)
-    # @message.save
+
     # récupérer current_user
-    # respond_to do |format|
-    #   format.js
-    # end
-    # respond to j
+    respond_to do |format|
+      format.js
+    end
   end
+
   private
 
   def message_params
-    params.require(:message).permit(:body, :user_id)
+    params.require(:message).permit(:body)
   end
 end

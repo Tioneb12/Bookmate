@@ -1,0 +1,8 @@
+
+bulle = document.querySelector(".message");
+send = document.getElementById("send");
+clean = document.getElementById("message_body");
+send.addEventListener("click", function(){
+    bulle.insertAdjacentHTML("beforeend", "<%= j render 'messages/message', message: @message %>");
+    clean.innerHTML = "";
+});
