@@ -3,7 +3,6 @@ Book.destroy_all
 User.destroy_all
 
 puts "Create books"
-
 Book.create!(
  title: "Le parfum",
  author: "Patrick Süskind",
@@ -52,7 +51,6 @@ Book.create!(
  google_books_id: "ECx3ffF7QF4C",
  cover_url: "http://books.google.com/books/content?id=ECx3ffF7QF4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
-
 Book.create!(
  title: "Programmer en s'amusant avec Ruby pour les Nuls",
  author: "Christopher HAUPT",
@@ -89,25 +87,22 @@ Book.create!(
 puts "Book finish"
 
 puts "Create Users"
-
 User.create!(
   first_name: "Binoum",
   last_name: "jojo",
   address: "8 place Tartas 33000 Bordeaux",
   password: "123456",
   email: "jojo@yop.com",
-  avatar: nil
+  avatar: "https://randomuser.me/api/portraits/men/32.jpg"
   )
-
 User.create!(
   first_name: "Zeller",
   last_name: "Benoit",
   address: "20 rue Binaud 33000 Bordeaux",
   password: "123456",
   email: "ben@yop.com",
-  avatar: nil
+  avatar: "https://randomuser.me/api/portraits/men/14.jpg"
   )
-
 User.create!(
   first_name: "Boussardon",
   last_name: "Damien",
@@ -122,16 +117,15 @@ User.create!(
   address: "13 rue de la faincerie 33000 Bordeaux",
   email: "Victoire@got.com",
   password: "123456",
-  avatar: nil
+  avatar: "https://randomuser.me/api/portraits/men/1.jpg"
   )
-
 User.create!(
   first_name: "Baratheon",
   last_name: "Joffrey ",
   address:"55 Rue du Faubourg Saint-Honoré, 75008 Paris",
   email: "joffrey@got.com",
   password: "123456",
-  avatar: nil)
+  avatar: "https://randomuser.me/api/portraits/men/50.jpg")
 
 User.create!(
   first_name: "Greyjoy",
@@ -139,7 +133,7 @@ User.create!(
   address:"Tour Montparnasse, 75008 Paris",
   email: "theon@got.com",
   password: "123456",
-  avatar: nil)
+  avatar: "https://randomuser.me/api/portraits/men/3.jpg")
 
 User.create!(
   first_name: "Gaillard",
@@ -152,7 +146,7 @@ User.create!(
 User.create!(
   first_name: "Collin",
   last_name: "Gabrielle ",
-  address:"41, rue du Fossé des Tanneurs, 83200 TOULON",
+  address:"Porte de Bourgogne 33000 bordeaux",
   email: "Gabrielle@got.com",
   password: "123456",
   remote_avatar_url: "https://res.cloudinary.com/dhdjyebiv/image/upload/c_crop,g_face/v1520005909/av1.jpg")
@@ -227,52 +221,43 @@ puts "User finished"
 puts "Create readings"
 
 Reading.create!(
-  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].sample,
-  book_id: [2,4,6,7].sample
+  user_id: [1,3].sample,
+  book_id: [1,3].sample
   )
 
 Reading.create!(
-  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
-  book_id: [1,3,5].sample
+  user_id: [2,4].sample,
+  book_id: [2,4].sample
   )
 
 Reading.create!(
-  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
-  book_id: [9,11,13].sample
-  )
-
-Reading.create!(
-  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
-  book_id: [2,5,8].sample
+  user_id: [5,7].sample,
+  book_id: [5,7].sample
 
   )
 
 Reading.create!(
-  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
-  book_id: [3,6,10].sample
+  user_id: [6,8].sample,
+  book_id: [6,8].sample
   )
 
 Reading.create!(
-  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
-  book_id: [11,1,3,9].sample
+  user_id: [9,11].sample,
+  book_id: [9,11].sample
   )
 Reading.create!(
-  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
-  book_id: [2,4].sample,
+  user_id: [10,12].sample,
+  book_id: [10,12].sample
   )
 
 Reading.create!(
-  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
-  book_id: [5,13].sample
+  user_id: [13,15].sample,
+  book_id: 13
   )
 
-Reading.create!(
-  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
-  book_id: 12
-  )
+# Reading.create!(
+#   user_id: [14,16],
+#   book_id: [1,12].sample
+#   )
 
-Reading.create!(
-  user_id: [1,2,3,4,5,6,7,8,9,10,11,12,13].sample,
-  book_id: [5,2,9,13].sample
-  )
 puts "Readings finished"
