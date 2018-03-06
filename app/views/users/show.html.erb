@@ -8,7 +8,11 @@
       <h2> <%="#{ @user.last_name} #{@user.first_name}"%></h2>
       <h4><%= @user.address %></h4>
       <p ><%= @user.bio %></p>
-      <%= link_to "DISCUTER", users_path ,class: "btn btn-primary col-md-3"  %>
+      <% if Conversation.between(current_user, @user).any?  %>
+        <%= link_to "DISCUTER", conversation_path(Conversation.between(current_user, @user).first), class: "btn btn-primary col-md-3"  %>
+      <% else %>
+        <%= button_to "DISCUTER", user_conversations_path(@user), method: :post, class: "btn btn-primary col-md-3" %>
+      <% end %>
     </div>
   </div>
   <div class="container">
