@@ -6,10 +6,17 @@ class MessagesController < ApplicationController
     @message.user = current_user
     @message.save
 
-    # récupérer current_user
-    respond_to do |format|
-      format.js
-    end
+    ActionCable.server.broadcast("conversation_#{@conversation.id}", {
+      message_html: render_to_string(
+        partial: 'messages/message',
+        locals: {
+          message: @message
+        }
+      ),
+      sender_id: current_user.id
+    })
+
+    head :ok
   end
 
   private

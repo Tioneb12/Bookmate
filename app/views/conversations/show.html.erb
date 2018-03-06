@@ -20,7 +20,7 @@
 <div class="messages-wrapper">
   <div class="container">
     <div class="messages">
-      <%= render collection: @messages, partial: "messages/message" %>
+      <%= render collection: @messages, partial: "messages/message", locals: { ownership: true } %>
     </div>
   </div>
 </div>
@@ -35,7 +35,41 @@
 </div>
 
 
-<script>
-  var messagesWrapper = document.querySelector(".messages-wrapper");
-  messagesWrapper.scrollTo(0, messagesWrapper.scrollHeight);
-</script>
+<% content_for(:after_js) do %>
+  <script>
+    var messagesWrapper = document.querySelector(".messages-wrapper");
+    messagesWrapper.scrollTo(0, messagesWrapper.scrollHeight);
+
+    const current_user_id = <%= current_user.id %>;
+
+    App.messages = App.cable.subscriptions.create(
+      {
+        channel: 'ConversationsChannel',
+        conversation_id: <%= @conversation.id %>
+      },
+      {
+        received: function(data) {
+          var messages = document.querySelector(".messages");
+          var formInput = document.getElementById("message_body");
+          formInput.value = "";
+
+          if (data.sender_id == current_user_id) {
+            messageClass = "message-mine";
+          } else {
+            messageClass = "message-other";
+          }
+
+          var template = document.createElement('template');
+          template.innerHTML = data.message_html.trim();
+          template.content.firstChild.classList.add(messageClass);
+
+          messages.appendChild(template.content.firstChild);
+
+          var messagesWrapper = document.querySelector(".messages-wrapper");
+          messagesWrapper.scrollTo(0, messagesWrapper.scrollHeight);
+
+        }
+      }
+    );
+  </script>
+<% end %>

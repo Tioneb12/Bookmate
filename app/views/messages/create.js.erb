@@ -1,7 +1,0 @@
-var messages = document.querySelector(".messages");
-var formInput = document.getElementById("message_body");
-formInput.value = "";
-messages.insertAdjacentHTML("beforeend", "<%= j render 'messages/message', message: @message %>");
-
-var messagesWrapper = document.querySelector(".messages-wrapper");
-messagesWrapper.scrollTo(0, messagesWrapper.scrollHeight);

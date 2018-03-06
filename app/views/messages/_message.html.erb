@@ -1,5 +1,9 @@
 <%
-  sender_class = message.user == current_user ? "message-mine" : "message-other"
+  if local_assigns[:ownership]
+    sender_class = message.user == current_user ? "message-mine" : "message-other"
+  else
+    sender_class = ""
+  end
 %>
 
 <div class="message <%= sender_class %>">
