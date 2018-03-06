@@ -38,7 +38,7 @@
     var messagesWrapper = document.querySelector(".messages-wrapper");
     messagesWrapper.scrollTo(0, messagesWrapper.scrollHeight);
 
-    const current_user_id = <%= current_user.id %>;
+    var current_user_id = <%= current_user.id %>;
 
     App.messages = App.cable.subscriptions.create(
       {
