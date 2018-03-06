@@ -1,11 +1,41 @@
-<div class="container">
-  <div class="message">
-    <%= render collection: @messages, partial: "messages/message" %>
+<% content_for(:body_class, "conversation") %>
+
+<div class="user-profile">
+  <div class="container">
+    <div class="list-user row">
+        <div class="info-profil col-lg-4">
+          <img src= "http://www.drodd.com/images14/black11.jpg" class= "avatar-list-user" >
+          <%#= image_tag user.avatar, class: "avatar-list-user" %>
+          <%#= cl_image_tag("av.jpg",width: 100, height: 100, crop: :fill, class: "avatar-list-user") %>
+          <h4><%= "#{@user.last_name}  #{@user.first_name}" %></h4>
+          <p class="bio-user"><%#= user.bio %></p>
+          <p><%= @user.email %></p>
+
+          <strong>Distance: <%= Geocoder::Calculations.distance_between(@user, current_user).round(2)%> Km</strong>
+        </div>
+    </div>
   </div>
-  <div class="form">
+</div>
+
+<div class="messages-wrapper">
+  <div class="container">
+    <div class="messages">
+      <%= render collection: @messages, partial: "messages/message" %>
+    </div>
+  </div>
+</div>
+
+<div class="form">
+  <div class="container">
     <%= simple_form_for [@conversation,@message], :method => :post, remote: true do |f| %>
       <%= f.input :body, as: :text, id: 'text_message'  %>
       <%= f.button :submit, id: 'send' %>
     <% end %>
   </div>
 </div>
+
+
+<script>
+  var messagesWrapper = document.querySelector(".messages-wrapper");
+  messagesWrapper.scrollTo(0, messagesWrapper.scrollHeight);
+</script>

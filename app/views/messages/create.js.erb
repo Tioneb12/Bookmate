@@ -1,8 +1,7 @@
+var messages = document.querySelector(".messages");
+var formInput = document.getElementById("message_body");
+formInput.value = "";
+messages.insertAdjacentHTML("beforeend", "<%= j render 'messages/message', message: @message %>");
 
-bulle = document.querySelector(".message");
-send = document.getElementById("send");
-clean = document.getElementById("message_body");
-send.addEventListener("click", function(){
-    bulle.insertAdjacentHTML("beforeend", "<%= j render 'messages/message', message: @message %>");
-    clean.innerHTML = "";
-});
+var messagesWrapper = document.querySelector(".messages-wrapper");
+messagesWrapper.scrollTo(0, messagesWrapper.scrollHeight);
