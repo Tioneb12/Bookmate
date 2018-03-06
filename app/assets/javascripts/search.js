@@ -1,4 +1,4 @@
-const form = document.querySelector(".simple_form.search");
+var form = document.querySelector(".simple_form.search");
 
 form.addEventListener("submit", (e) => {
   var results_book = document.getElementById("book-results");
