@@ -1,0 +1,29 @@
+.messages-wrapper {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+body.conversation {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+.message {
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 5px;
+
+  &.message-other {
+      background: #ccc;
+      color: black;
+      margin-right: 10%;
+  }
+
+  &.message-mine {
+    background: $blue;
+    color: white;
+    margin-left: 10%;
+  }
+}

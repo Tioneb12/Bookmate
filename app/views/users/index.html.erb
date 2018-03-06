@@ -3,7 +3,5 @@
   <%= link_to "log in", new_user_session_path, class: "btn btn-primary "%>
 </div>
 <div class="container <%= 'blur' unless user_signed_in? %>" >
-  <div class="row">
-    <%= render collection: @users, partial: "users/user" %>
-  </div>
+  <%= render collection: @users, partial: "users/user" %>
 </div>

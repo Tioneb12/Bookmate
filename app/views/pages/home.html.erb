@@ -6,8 +6,7 @@
   </div>
 </div>
 <div class="container">
-  <div id="book-results"></div>
-  <div id="display-none">
+  <div id="book-results">
     <%= render collection: @books, partial: "books/book" %>
   </div>
   <% if (user_signed_in? && current_user.readings.count >= 5) || session[:books].count >= 5 %>
