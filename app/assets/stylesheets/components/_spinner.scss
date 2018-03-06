@@ -1,0 +1,24 @@
+$spinnercolor: #000;
+$trailcolor: rgba(#000, 0.4);
+$spinner-width: 150px;
+$spinner-thickness: 10px;
+$spinner-speed: 0.5s;
+$spinner-mode: linear;
+
+.spinner {
+  animation: rotate-spinner $spinner-speed infinite $spinner-mode;
+  border: $spinner-thickness $trailcolor solid;
+  border-top-color: $spinnercolor;
+  border-radius: $spinner-width;
+  display: inline-block;
+  height: $spinner-width;
+  width: $spinner-width;
+  vertical-align: middle;
+  margin-left: 5px;
+
+}
+
+@keyframes rotate-spinner {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}

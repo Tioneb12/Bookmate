@@ -4,6 +4,7 @@
 </div>
 <div class="container <%= 'blur' unless user_signed_in? %>" >
   <div class="row">
+    <h1 style="letter-spacing: 8px; text-align: center;"><strong>MATCHES</strong></h1>
     <%= render collection: @users, partial: "users/user" %>
   </div>
 </div>

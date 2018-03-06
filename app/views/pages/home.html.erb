@@ -6,10 +6,14 @@
   </div>
 </div>
 <div class="container">
-  <div id="book-results"></div>
-  <div id="display-none">
+  <div id="book-results">
     <%= render collection: @books, partial: "books/book" %>
   </div>
+
+  <div id="search-spinner" class="text-center hidden">
+    <span class="spinner"></span>
+  </div>
+
   <% if (user_signed_in? && current_user.readings.count >= 5) || session[:books].count >= 5 %>
     <%= link_to "Aller voir les profils",  users_path, class: "btn btn-primary stat-display", id: "btn-path" %>
   <% else %>
