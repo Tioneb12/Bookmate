@@ -9,8 +9,12 @@
   align-items: center;
   justify-content: space-between;
 }
-.navbar-wagon-brand a:hover {
-  text-decoration: none;
+.navbar-wagon-brand{
+  color: $blue;
+  margin-bottom: 10px;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center
 }
 
 /* Logo */
@@ -42,6 +46,8 @@
 .navbar-wagon-link {
   color: #616668;
   font-size: 14px;
+  border: 1px solid none;
+  border-radius: 4px;
 }
 .navbar-wagon-link:hover {
   color: #da552f;

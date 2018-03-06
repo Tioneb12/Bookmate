@@ -93,7 +93,7 @@ User.create!(
   address: "8 place Tartas 33000 Bordeaux",
   password: "123456",
   email: "jojo@yop.com",
-  avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+  remote_avatar_url: "https://randomuser.me/api/portraits/men/32.jpg"
   )
 User.create!(
   first_name: "Zeller",
@@ -101,7 +101,7 @@ User.create!(
   address: "20 rue Binaud 33000 Bordeaux",
   password: "123456",
   email: "ben@yop.com",
-  avatar: "https://randomuser.me/api/portraits/men/14.jpg"
+  remote_avatar_url: "https://randomuser.me/api/portraits/men/14.jpg"
   )
 User.create!(
   first_name: "Boussardon",
@@ -109,7 +109,7 @@ User.create!(
   address: "11 rue de la faincerie 33000 Bordeaux",
   password: "123456",
   email: "damien@yop.com",
-  avatar: nil
+  remote_avatar_url: "https://randomuser.me/api/portraits/men/12.jpg"
   )
 User.create!(
   first_name: "Lemieux",
@@ -117,7 +117,7 @@ User.create!(
   address: "13 rue de la faincerie 33000 Bordeaux",
   email: "Victoire@got.com",
   password: "123456",
-  avatar: "https://randomuser.me/api/portraits/men/1.jpg"
+  remote_avatar_url: "https://randomuser.me/api/portraits/men/1.jpg"
   )
 User.create!(
   first_name: "Baratheon",
@@ -125,7 +125,7 @@ User.create!(
   address:"55 Rue du Faubourg Saint-Honoré, 75008 Paris",
   email: "joffrey@got.com",
   password: "123456",
-  avatar: "https://randomuser.me/api/portraits/men/50.jpg")
+  remote_avatar_url: "https://randomuser.me/api/portraits/men/50.jpg")
 
 User.create!(
   first_name: "Greyjoy",
@@ -133,7 +133,7 @@ User.create!(
   address:"Tour Montparnasse, 75008 Paris",
   email: "theon@got.com",
   password: "123456",
-  avatar: "https://randomuser.me/api/portraits/men/3.jpg")
+  remote_avatar_url: "https://randomuser.me/api/portraits/men/3.jpg")
 
 User.create!(
   first_name: "Gaillard",
