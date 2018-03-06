@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :messages
   has_many :conversations, foreign_key: :sender_id
 
+  mount_uploader :avatar, PhotoUploader
+
   def google_books_ids
     @google_books_ids ||= books.select(:google_books_id).pluck(:google_books_id)
   end

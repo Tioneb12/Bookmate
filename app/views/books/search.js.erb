@@ -1,10 +1,14 @@
 // choper le container des books
-results_book = document.getElementById("book-results");
+var results_book = document.getElementById("book-results");
 // vider le results_book
 results_book.innerHTML = "";
 //pour chaque book de @books
+
 <% @books.each do |book| %>
   // append le partial du book
   results_book.insertAdjacentHTML("beforeend", "<%= j render 'books/book', book: book %>");
 <%end%>
 
+
+// cacher le spinner
+document.getElementById("search-spinner").classList.add("hidden");

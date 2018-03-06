@@ -3,5 +3,8 @@
   <%= link_to "log in", new_user_session_path, class: "btn btn-primary "%>
 </div>
 <div class="container <%= 'blur' unless user_signed_in? %>" >
-  <%= render collection: @users, partial: "users/user" %>
+  <div class="row">
+    <h1 style="letter-spacing: 8px; text-align: center;"><strong>MATCHES</strong></h1>
+    <%= render collection: @users, partial: "users/user" %>
+  </div>
 </div>
