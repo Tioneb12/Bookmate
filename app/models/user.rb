@@ -9,6 +9,8 @@ class User < ApplicationRecord
 
   has_many :readings, dependent: :destroy
   has_many :books, through: :readings
+  has_many :messages
+  has_many :conversations, foreign_key: :sender_id
 
   def google_books_ids
     @google_books_ids ||= books.select(:google_books_id).pluck(:google_books_id)
