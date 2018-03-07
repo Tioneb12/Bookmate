@@ -1,11 +1,11 @@
 
 .message-wrapper {
-  flex: 1 0 auto;
-  overflow-y: scroll;
-  background-color: #ccc;
   margin-bottom: 20px;
   padding: 20px 20px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card-img{
@@ -14,7 +14,16 @@
 }
 
 .card-body{
-
+  color:$black;
+  flex: 1 0 auto;
+  padding: 20px;
+  margin: 20px;
 
 }
 
+.msg{
+  background-color: #ccA;
+}
+.card-info{
+  color: #2C2C2C;
+}
