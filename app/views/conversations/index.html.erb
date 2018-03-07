@@ -1,20 +1,22 @@
-  <div class="container-fluid">
-    <% Conversation.all.each do |conversation| %>
-      <div class="card message-wrapper">
-        <div class="card-img">
-          <%= image_tag current_user.avatar, class: "avatar"%>
-        </div>
-        <div class="card-body">
-          <p> <%= current_user.first_name%> <%= current_user.last_name %></p>
-          <div class="message">
-            <%= conversation %>
-          </div>
-          <hr>
-        </div>
-        <div class="card-info">
-          <em style="color: blue;"><%= conversation.created_at %></em>
+<div class="container-fluid">
+  <% @conversations.each do |conversation| %>
+    <% user = conversation.opposed_user(current_user) %>
+    <div class="card message-wrapper">
+      <div class="card-img">
+        <%#= image_tag conversation.sender.avatar, class: "avatar"%>
+      </div>
+      <div class="card-body">
+        <p> <%= user.first_name %> <%= user.last_name %></p>
+        <div class="msg">
+
+          <%= conversation.messages.last.body if conversation.messages.any? %>
         </div>
       </div>
-    <% end %>
-  </div>
+      <div class="card-info">
+        <strong><%= conversation.messages.last.created_at if conversation.messages.any? %></strong>
+      </div>
+      <%= link_to "go to conversation", conversation_path(conversation) %>
+    </div>
+  <% end %>
+</div>
 
