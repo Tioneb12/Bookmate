@@ -18,7 +18,7 @@ class ReadingsController < ApplicationController
         @book = Book.new({
           google_books_id:  parsed_book["id"],
           title:            parsed_book.dig("volumeInfo", "title"),
-          cover_url:        parsed_book.dig("volumeInfo", "imageLinks", "thumbnail"),
+          cover_url:        parsed_book.dig("volumeInfo", "imageLinks", "thumbnail").gsub("http", "https"),
           author:           parsed_book.dig("volumeInfo","authors", 0)
         })
         # creer l'instance de book et save

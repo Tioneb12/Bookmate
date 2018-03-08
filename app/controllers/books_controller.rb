@@ -9,7 +9,7 @@ class BooksController < ApplicationController
       @books << Book.new({
         google_books_id:  item["id"],
         title:            item.dig("volumeInfo", "title"),
-        cover_url:        item.dig("volumeInfo", "imageLinks", "thumbnail"),
+        cover_url:        item.dig("volumeInfo", "imageLinks", "thumbnail").gsub("http", "https"),
         author:           item.dig("volumeInfo","authors", 0)
       })
     end

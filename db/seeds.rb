@@ -9,28 +9,28 @@ b1 = Book.create!(
  title: "Paroles",
  author: "Jacques Prévert",
  google_books_id: "lDvXDQAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=lDvXDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=lDvXDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b2 = Book.create!(
  title: "La Peste",
  author: "Albert Camus",
  google_books_id: "AUTxQ3Elx1YC",
- cover_url: "http://books.google.com/books/content?id=AUTxQ3Elx1YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=AUTxQ3Elx1YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b3 = Book.create!(
  title: "Les miserables",
  author: "Victor hugo",
  google_books_id: "E18Bom4aEnIC",
- cover_url: "http://books.google.com/books/content?id=E18Bom4aEnIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=E18Bom4aEnIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b4 = Book.create!(
  title: "Le petit prince",
  author: "Antoine de Saint-Exupéry",
  google_books_id: "OYNOgPTtXF4C",
- cover_url: "http://books.google.com/books/content?id=OYNOgPTtXF4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=OYNOgPTtXF4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 
@@ -38,7 +38,7 @@ b5 = Book.create!(
  title: "Germinal",
  author: "Emile Zola",
  google_books_id: "FmhLDwAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=FmhLDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=FmhLDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 
@@ -46,56 +46,56 @@ b6 = Book.create!(
  title: "Le Seigneur des anneaux (Tome 1) - La fraternité de l'anneau",
  author: "John Ronald Reuel Tolkien",
  google_books_id: "np2VDAAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=np2VDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=np2VDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b7 = Book.create!(
  title: "Le rouge et le noir - Texte abrégé",
  author: "Stendhal",
  google_books_id: "Na697282bN8C",
- cover_url: "http://books.google.com/books/content?id=Na697282bN8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=Na697282bN8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b8 = Book.create!(
  title: "Le grand Meaulnes - Texte abrégé",
  author: "Alain Fournier",
  google_books_id: "cafSWtpivdQC",
- cover_url: "http://books.google.com/books/content?id=cafSWtpivdQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=cafSWtpivdQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b9 = Book.create!(
  title: "Vingt mille lieues sous les mers - Texte abrégé",
  author: "Jules Verne",
  google_books_id: "F7iSfTtNJTEC",
- cover_url: "http://books.google.com/books/content?id=F7iSfTtNJTEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=F7iSfTtNJTEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b10 = Book.create!(
  title: "JAMAIS SANS MA FILLE.",
  author: "Betty Mahmoody",
  google_books_id: "cJWxGwAACAAJ",
- cover_url: "http://books.google.com/books/content?id=cJWxGwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=cJWxGwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
 )
 
 b11 = Book.create!(
  title: "Les Trois Mousquetaires",
  author: "Alexandre Dumas",
  google_books_id: "lTMVAAAAQAAJ",
- cover_url: "http://books.google.com/books/content?id=lTMVAAAAQAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=lTMVAAAAQAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b12 = Book.create!(
  title: "Le Château de ma mère",
  author: "Marcel Pagnol",
  google_books_id: "osVsBQAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=osVsBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=osVsBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b13 = Book.create!(
  title: "Le Journal d'Anne Frank",
  author: "Anne Frank",
  google_books_id: "TCNGDgAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=TCNGDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=TCNGDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 
@@ -103,7 +103,7 @@ b14 = Book.create!(
  title: "Les oiseaux se cachent pour mourir",
  author: "Colleen McCULLOUGH",
  google_books_id: "XXdJAQAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=XXdJAQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=XXdJAQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 
@@ -111,98 +111,98 @@ b15 = Book.create!(
  title: "Sans Famille",
  author: "Hector Malot",
  google_books_id: "y5m28WH8dMEC",
- cover_url: "http://books.google.com/books/content?id=y5m28WH8dMEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=y5m28WH8dMEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b16 = Book.create!(
  title: "Jane Eyre, ou Les Mémoires d'une Institutrice",
  author: "Charlotte Brontë",
  google_books_id: "64sGAAAAQAAJ",
- cover_url: "http://books.google.com/books/content?id=64sGAAAAQAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=64sGAAAAQAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b17 = Book.create!(
  title: "Au nom de tous les miens",
  author: "Martin GRAY",
  google_books_id: "oZn8AAAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=oZn8AAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=oZn8AAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b18 = Book.create!(
  title: "Le meilleur des mondes",
  author: "Aldous HUXLEY",
  google_books_id: "EvwG_3AUzBsC",
- cover_url: "http://books.google.com/books/content?id=EvwG_3AUzBsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=EvwG_3AUzBsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b19 = Book.create!(
  title: "Le parfum",
  author: "Patrick Süskind",
  google_books_id: "qwanRcEwD2gC",
- cover_url: "http://books.google.com/books/content?id=qwanRcEwD2gC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=qwanRcEwD2gC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b20 = Book.create!(
  title: "L'Alchimiste",
  author: "Paulo Coelho",
  google_books_id: "wLs6DwAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=wLs6DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=wLs6DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b21 = Book.create!(
  title: "Voyage au bout de la nuit (résumé de l'oeuvre)",
  author: "Louis-Ferdinand Céline,Fichebook",
  google_books_id: "Ngv_7ZgT1HIC",
- cover_url: "http://books.google.com/books/content?id=Ngv_7ZgT1HIC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=Ngv_7ZgT1HIC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
 )
 
 b22 = Book.create!(
  title: "La promesse de l'aube",
  author: "Romain Gary",
  google_books_id: "QiHQMXVUcFoC",
- cover_url: "http://books.google.com/books/content?id=QiHQMXVUcFoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=QiHQMXVUcFoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b23 = Book.create!(
  title: "Journal d'un vieux dégueulasse",
  author: "Charles Bukowski",
  google_books_id: "L3bIGwAACAAJ",
- cover_url: "http://books.google.com/books/content?id=L3bIGwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=L3bIGwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
 )
 
 b24 = Book.create!(
  title: "Le Diable et le bon Dieu. Trois actes et onze tableaux",
  author: "Jean-Paul Sartre",
  google_books_id: "1wI5DwAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=1wI5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=1wI5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b25 = Book.create!(
  title: "Huis clos. Suivi de Les mouches",
  author: "Jean-Paul Sartre",
  google_books_id: "kxc4DwAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=kxc4DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=kxc4DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b26 = Book.create!(
  title: "Vipère au poing",
  author: "Hervé Bazin",
  google_books_id: "ECx3ffF7QF4C",
- cover_url: "http://books.google.com/books/content?id=ECx3ffF7QF4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=ECx3ffF7QF4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b27 = Book.create!(
  title: "Programmer en s'amusant avec Ruby pour les Nuls",
  author: "Christopher HAUPT",
  google_books_id: "QYzwDAAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=QYzwDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "https://books.google.com/books/content?id=QYzwDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 b28 = Book.create!(
  title:"De l'art de dire des conneries",
  author: "Harry Frankfurt",
  google_books_id: "ZkALDgAAQBAJ",
- cover_url:  "http://books.google.com/books/content?id=ZkALDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72fRySpNfWH06fHRfrFTMaPY3gtQ8HzK3M_NZXXvvzsK-fReXadZUGMm5mxmNKEpceJ-fjcIIzaNW-TnCJrfaWFeBFmJUVz46NQhoj_qRLX02uh5qjtWq1WDZwYHMxlT8BnDyj0&source=gbs_api"
+ cover_url:  "https://books.google.com/books/content?id=ZkALDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72fRySpNfWH06fHRfrFTMaPY3gtQ8HzK3M_NZXXvvzsK-fReXadZUGMm5mxmNKEpceJ-fjcIIzaNW-TnCJrfaWFeBFmJUVz46NQhoj_qRLX02uh5qjtWq1WDZwYHMxlT8BnDyj0&source=gbs_api"
 )
 
 b29 = Book.create!(
@@ -216,7 +216,7 @@ b30 = Book.create!(
   google_books_id: "4puxCQAAQBAJ",
   title: "Kirikou et la sorcière",
   cover_url:
-   "http://books.google.com/books/content?id=4puxCQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70EmP6iWQspbuxDYjfXwhjlsYJ7hexSRN4zrtKe5qeSbPflJJGbSh7oi_JT4bnQNtCrGoFmqpM6g9MCDHSwENoeZYSb2K5IW8VKTeCpRu5qG5QyoMnLmBQ6O-X6R9pkXGO7nOGs&source=gbs_api",
+   "https://books.google.com/books/content?id=4puxCQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70EmP6iWQspbuxDYjfXwhjlsYJ7hexSRN4zrtKe5qeSbPflJJGbSh7oi_JT4bnQNtCrGoFmqpM6g9MCDHSwENoeZYSb2K5IW8VKTeCpRu5qG5QyoMnLmBQ6O-X6R9pkXGO7nOGs&source=gbs_api",
   author: "Michel Ocelot",
   )
 
