@@ -11,8 +11,12 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
+      <%= link_to "Home", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <%= link_to "Mes conversations", conversations_path(), class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to user_path(current_user), class: "navbar-wagon-item navbar-wagon-link" do %>
+        <%= t(".profile", default: "Profile") %>
+      <% end %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
