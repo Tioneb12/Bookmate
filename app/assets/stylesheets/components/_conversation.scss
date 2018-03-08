@@ -61,7 +61,8 @@ body.conversation {
 .form label{
   display:none;
 }
-.form textarea{
+.form .string{
+    position:0px;
     border-radius:0px;
   }
 .form .new_message{
@@ -75,11 +76,13 @@ body.conversation {
   .btn{
     border-radius:0px;
   }
-  textarea{
+  .string{
+    height:55px;
     border-top-left-radius: 2px;
     border-color: $blue;
   }
   .btn-default {
+
     font-size: 1.6em;
     width:15%;
     color: white;

@@ -15,9 +15,7 @@
 <div class="messages-wrapper">
   <div class="container">
     <div class="messages">
-
       <%= render collection: @messages, partial: "messages/message", locals: { ownership: true } %>
-
     </div>
   </div>
 </div>
@@ -25,8 +23,8 @@
 <div class="form">
   <div class="container">
     <%= simple_form_for [@conversation,@message], :method => :post, remote: true do |f| %>
-      <%= f.input :body, as: :text, id: 'text_message' %>
-      <%= f.button :button, id: "send " do %>
+      <%= f.input :body,as: :string, id: 'text_message'%>
+      <%= f.button :button,  id: "send " do %>
         <i class="fas fa-paper-plane"></i>
       <% end %>
     <% end %>
@@ -37,10 +35,16 @@
 
 
 
+
+
+
+
+
+
+
 <% content_for(:after_js) do %>
 
   <script>
-
     var messagesWrapper = document.querySelector(".messages-wrapper");
     messagesWrapper.scrollTo(0, messagesWrapper.scrollHeight);
 
@@ -52,6 +56,7 @@
         conversation_id: <%= @conversation.id %>
       },
       {
+
         received: function(data) {
           var messages = document.querySelector(".messages");
           var formInput = document.getElementById("message_body");
