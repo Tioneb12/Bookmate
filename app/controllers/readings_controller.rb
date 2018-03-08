@@ -13,12 +13,14 @@ class ReadingsController < ApplicationController
       @book = Book.find_by(google_books_id: params[:book_google_books_id])
       unless @book
         # aller chercher le book via lapi
-        response = RestClient.get("https://www.googleapis.com/books/v1/volumes/#{params[:book_google_books_id]}")
+        url = "https://www.googleapis.com/books/v1/volumes/#{params[:book_google_books_id]}?key=#{ENV["GOOGLE_API_KEY"]}&country=FR"
+        puts url
+        response = RestClient.get(url)
         parsed_book = JSON.parse(response.body)
         @book = Book.new({
           google_books_id:  parsed_book["id"],
           title:            parsed_book.dig("volumeInfo", "title"),
-          cover_url:        parsed_book.dig("volumeInfo", "imageLinks", "thumbnail").gsub("http", "https"),
+          cover_url:        parsed_book.dig("volumeInfo", "imageLinks", "thumbnail")&.gsub("http", "https"),
           author:           parsed_book.dig("volumeInfo","authors", 0)
         })
         # creer l'instance de book et save
