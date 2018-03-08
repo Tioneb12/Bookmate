@@ -1,5 +1,5 @@
 .stat {
-  display: none;
+  transform: translateY(200px);
 }
 .stat-display {
   height: 60px;
@@ -9,4 +9,7 @@
   width: 100vw;
   font-size: 19px;
   padding-top: 16px;
+
+  transform: translateY(Opx);
+  transition: transform ease 300ms;
 }
