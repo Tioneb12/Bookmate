@@ -25,7 +25,7 @@
 <div class="form">
   <div class="container">
     <%= simple_form_for [@conversation,@message], :method => :post, remote: true do |f| %>
-      <%= f.input :body, as: :text, id: 'text_message'  %>
+      <%= f.input :body, as: :text, id: 'text_message' %>
       <%= f.button :button, id: "send " do %>
         <i class="fas fa-paper-plane"></i>
       <% end %>
@@ -40,6 +40,7 @@
 <% content_for(:after_js) do %>
 
   <script>
+
     var messagesWrapper = document.querySelector(".messages-wrapper");
     messagesWrapper.scrollTo(0, messagesWrapper.scrollHeight);
 

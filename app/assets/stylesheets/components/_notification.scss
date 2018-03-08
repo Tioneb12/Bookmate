@@ -6,6 +6,8 @@
   height: 50vh;
   z-index: 100;
   max-width: 380px;
+  display: none;
+  transition: display 4s;
 }
 .notification{
   background-color: white;
