@@ -5,6 +5,9 @@
 
   before_action :create_session_books
 
+  def default_url_options
+    { host: ENV["HOST"] || "localhost:3000" }
+  end
 
   def create_session_books
     # si le tableau de session books existe pas, le creer
