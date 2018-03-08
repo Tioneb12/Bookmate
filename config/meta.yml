@@ -1,0 +1,5 @@
+
+meta_product_name: "BookMate"
+meta_title: "BookMate - Un livre, une histoire"
+meta_description: "Rencontre des personnes qui ont les mêmes gouts littéraires que toi"
+meta_image: "bookmate.svg"                       # should exist in `app/assets/images/`
