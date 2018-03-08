@@ -3,7 +3,7 @@
     <% user = conversation.opposed_user(current_user) %>
     <div class="card message-wrapper">
       <div class="card-img">
-        <%#= image_tag user.avatar %>
+        <%= image_tag user.avatar, class: "sm-avatar"%>
       </div>
       <div class="card-body">
         <p> <%= user.first_name %> <%= user.last_name %></p>

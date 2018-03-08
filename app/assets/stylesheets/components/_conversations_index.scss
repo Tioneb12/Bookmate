@@ -12,10 +12,10 @@
   justify-content: space-between;
 }
 
-.card-img{
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
+.card-img .sm-avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
 
 }
 
@@ -30,6 +30,7 @@
 
 .msg{
   width: 200px;
+  color: whitesmoke;
   font-weight: lighter;
   z-index: 5;
 }

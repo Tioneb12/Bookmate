@@ -2,4 +2,3 @@
 meta_product_name: "BookMate"
 meta_title: "BookMate - Meet your soulmate"
 meta_description: "Rencontre des personnes qui ont les mêmes gouts littéraires que toi"
-meta_image: "bookmate.png"                       # should exist in `app/assets/images/`
