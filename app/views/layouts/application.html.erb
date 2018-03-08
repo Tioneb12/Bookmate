@@ -28,11 +28,32 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body class="<%= yield(:body_class) %>">
+    <%= render 'shared/notifications' %>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= yield(:after_js) %>
+
+    <% if user_signed_in? %>
+      <script>
+        var current_user_id = <%= current_user.id %>;
+        var current_conversation_id = parseInt(<%= yield(:conversation_id) %>);
+        App.notifications = App.cable.subscriptions.create(
+          'NotificationsChannel',
+          {
+            received: function(data) {
+              if (current_conversation_id != data.conversation_id) {
+                var notifications = document.getElementById('notifications');
+                notifications.insertAdjacentHTML('beforeend', data.notification_html)
+              }
+            }
+          }
+        );
+      </script>
+    <%end %>
+
+
   </body>
 </html>

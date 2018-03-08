@@ -16,6 +16,16 @@ class MessagesController < ApplicationController
       sender_id: current_user.id
     })
 
+    ActionCable.server.broadcast("notification_#{@conversation.opposed_user(current_user).id}", {
+      notification_html:render_to_string(
+        partial: 'messages/notification',
+        locals: {
+          message: @message
+        }
+      ),
+      conversation_id: @conversation.id
+    })
+
     head :ok
   end
 

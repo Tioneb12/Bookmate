@@ -6,9 +6,12 @@
   end
 %>
 
+
+
 <div class="message <%= sender_class %>">
   <div><%= message.body %></div>
   <small class="text-muted"><%= time_ago_in_words(message.created_at) %></small>
   <%= image_tag message.user.avatar, class: "img-circle small-avatar", width: 36 %>
 </div>
+
 
