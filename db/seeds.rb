@@ -1,5 +1,6 @@
 
 Book.destroy_all
+
 User.destroy_all
 
 puts "Create books"
@@ -37,7 +38,7 @@ b5 = Book.create!(
  title: "Germinal",
  author: "Emile Zola",
  google_books_id: "FmhLDwAAQBAJ",
- cover_url: "http://books.google.com/books/content?id=OYNOgPTtXF4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+ cover_url: "http://books.google.com/books/content?id=FmhLDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 )
 
 
@@ -259,7 +260,7 @@ u4 = User.create!(
 u5 = User.create!(
   first_name: "Baratheon",
   last_name: "Joffrey ",
-  address:"55 Rue du Faubourg Saint-Honoré, 75008 Paris",
+  address:"5 Rue Lagrange, 33000 Bordeaux",
   email: "joffrey@got.com",
   password: "123456",
   remote_avatar_url: "https://randomuser.me/api/portraits/men/50.jpg")
@@ -267,7 +268,7 @@ u5 = User.create!(
 u6 = User.create!(
   first_name: "Greyjoy",
   last_name: "Theon ",
-  address:"Tour Montparnasse, 75008 Paris",
+  address:"5 Rue Lafon, 33100 Bordeaux",
   email: "theon@got.com",
   password: "123456",
   remote_avatar_url: "https://randomuser.me/api/portraits/men/3.jpg")
@@ -275,7 +276,7 @@ u6 = User.create!(
 u7 = User.create!(
   first_name: "Gaillard",
   last_name: "Afrodille ",
-  address:"84, avenue du Marechal Juin, 97450 SAINT-LOUIS",
+  address:"12 Porte de Bourgogne 33000 bordeaux",
   email: "Afrodille@got.com",
   password: "123456",
   remote_avatar_url: "https://randomuser.me/api/portraits/women/40.jpg")
@@ -299,7 +300,7 @@ u9 = User.create!(
 u10 = User.create!(
   first_name: "Lanoie",
   last_name: "Patricia",
-  address:"72, Boulevard de Normandie, 92260 FONTENAY-AUX-ROSES",
+  address:" 10 Place Saint Pierre, 33000 Bordeaux",
   email: "Patricia@got.com",
   password: "123456",
   remote_avatar_url: "https://randomuser.me/api/portraits/women/10.jpg")
@@ -411,7 +412,7 @@ u23 = User.create!(
 u24 = User.create!(
   first_name: "Salois",
   last_name: "Annette",
-  address:"Cité Christian Solar, 33100 Bordeaux",
+  address:"Place Saint Pierre, 33000 Bordeaux",
   email: "Annette@got.com",
   password: "123456",
   remote_avatar_url: "https://randomuser.me/api/portraits/women/31.jpg")
@@ -470,54 +471,18 @@ puts "Users finished"
 puts "Create readings"
 
 
-Reading.create!(
-  user_id: [u1,u2,u3].sample,
-  book_id: [b1,b2,b3].sample
-  )
+u1.readings.create!([
+  { book: b1 },
+  { book: b2 },
+  { book: b3 },
+  { book: b4 },
+  { book: b5 }
+])
 
-Reading.create!(
-  user_id: [u4,u5,u6].sample,
-  book_id: [b4,b5,b6].sample
-  )
-
-Reading.create!(
-  user_id: [u7,u8,u9].sample,
-  book_id: [b7,b8,b9].sample
-  )
-
-Reading.create!(
-  user_id: [u10,u11,u12].sample,
-  book_id: [b10,b11,b12].sample
-
-  )
-
-Reading.create!(
-  user_id: [u13,u14,u15].sample,
-  book_id: [b13,b14,b15].sample
-  )
-
-Reading.create!(
-  user_id: [u16,u17,u18].sample,
-  book_id: [b16,b17,b18].sample
-  )
-Reading.create!(
-  user_id: [u19,u20,u21].sample,
-  book_id: [b19,b20,b21].sample
-  )
-
-Reading.create!(
-  user_id: [u22,u23,u24].sample,
-  book_id: [b22,b23,b24].sample
-  )
-
-Reading.create!(
-  user_id: [u25,u26,u27].sample,
-  book_id: [b25,b26,b27].sample
-  )
-Reading.create!(
-  user_id: [u28,u29,u30].sample,
-  book_id: [b28,b29,b30].sample
-  )
-
+(2..30).each do |i|
+  rand(10..30).times do
+    eval("u#{i}").readings.create(book: eval("b#{rand(1..30)}"))
+  end
+end
 
 puts "Readings finished"

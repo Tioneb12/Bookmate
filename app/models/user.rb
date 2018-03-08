@@ -9,8 +9,8 @@ class User < ApplicationRecord
 
   has_many :readings, dependent: :destroy
   has_many :books, through: :readings
-  has_many :messages
-  has_many :conversations, foreign_key: :sender_id
+  has_many :conversations, foreign_key: :sender_id, dependent: :destroy
+  has_many :messages, dependent: :destroy
 
   mount_uploader :avatar, PhotoUploader
 
