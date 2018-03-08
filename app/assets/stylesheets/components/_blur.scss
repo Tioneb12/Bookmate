@@ -8,11 +8,12 @@
   display: none;
 }
 .no-log {
+
   text-align: center;
   top: 10vh;
   left: 20vw;
   z-index: 5;
-  position: fixed;
+  position:absolute;
   width: 60vw;
   min-height: 80vh;
   background-color:rgba(243, 243, 243, 0.97);
