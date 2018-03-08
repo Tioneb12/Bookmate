@@ -1,18 +1,13 @@
-<!-- app/views/offers/show.html.erb -->
-<%# content_for :meta_title, "#{@user.first_name} is on #{DEFAULT_META["meta_product_name"]}" %>
-<%# content_for :meta_description, @user.bio %>
-<%# content_for :meta_image, cl_image_path(@user.avatar.path) %>
 <div class="wrapper-show">
   <div class= "row">
     <div class="content-img col-md-4">
-      <%#= cl_image_tag @user.avatar, class: "avatar avatar-show" %>
       <%= cl_image_tag @user.avatar, class: "avatar-show" %>
     </div>
     <div class="content-info col-md-8">
       <h2> <%="#{ @user.last_name} #{@user.first_name}"%></h2>
       <h4><%= @user.address %></h4>
       <p ><%= @user.bio %></p>
-      <% if Conversation.between(current_user, @user).any?  %>
+      <% if Conversation.between(current_user, @user).any? %>
         <%= link_to "DISCUTER", conversation_path(Conversation.between(current_user, @user).first), class: "btn btn-primary col-md-3"  %>
       <% else %>
         <%= button_to "DISCUTER", user_conversations_path(@user), method: :post, class: "btn btn-primary col-md-3" %>
