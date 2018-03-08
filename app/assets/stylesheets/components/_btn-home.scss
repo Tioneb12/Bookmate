@@ -2,9 +2,11 @@
   display: none;
 }
 .stat-display {
+  height: 60px;
   display: block;
   position: fixed;
   bottom: 0px;
   width: 100vw;
   font-size: 19px;
+  padding-top: 16px;
 }
