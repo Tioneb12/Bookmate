@@ -1,0 +1,9 @@
+<div class="notification">
+  <div class="info-notif">
+    <%= image_tag message.user.avatar, class: "img-circle small-avatar", width: 36 %>
+      <p class ="sender-name"><%= message.user.first_name %> <%= message.user.last_name %></p>
+    </div>
+  <div class="message-notif"><%= message.body %></div>
+</div>
+
+
