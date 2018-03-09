@@ -22,12 +22,9 @@
           <%= f.button :submit, "Sign up", class: "btn-primary col-lg-offset-4 col-lg-4 btn-sign" %>
         </div>
     <% end %>
-
-
   </div>
   </div>
 </div>
-
 
 <div class="container <%= 'blur' unless user_signed_in? %>" >
   <div class="row">
@@ -35,16 +32,3 @@
     <%= render collection: @users, partial: "users/user" %>
   </div>
 </div>
-
-
-<!-- <script type="text/javascript">
- var form = document.getElementById("display-form");
-  var cacher = document.querySelector(".explication");
-  var visible = document.querySelector(".form-inscription")
-  form.addEventListener("click", (even) => {
-    cacher.classList.add("no-display");
-    visible.classList.remove("no-display");
-    visible.classList.remove("display");
-  });
-</script> -->
-
