@@ -27,7 +27,7 @@
       @book = Book.find_by(google_books_id: google_books_id)
       unless @book
         # api request + create book
-        result = RestClient.get("https://www.googleapis.com/books/v1/volumes/#{google_books_id}")
+        result = RestClient.get("https://www.googleapis.com/books/v1/volumes/#{google_books_id}?key=#{ENV["GOOGLE_API_KEY"]}&country=FR")
         parsed_book = JSON.parse(result.body)
 
         @book = Book.new({
