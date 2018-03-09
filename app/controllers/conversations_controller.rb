@@ -12,7 +12,7 @@ class ConversationsController < ApplicationController
   def show
     @message = Message.new
     @conversation = Conversation.find(params[:id])
-    @messages = Message.where(conversation_id: @conversation.id)
+    @messages = Message.where(conversation_id: @conversation.id).order(created_at: :asc)
     @user = @conversation.opposed_user(current_user)
   end
 end
