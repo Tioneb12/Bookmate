@@ -8,7 +8,7 @@
       <p class="bio-user"><%#= user.bio %></p>
       <p><%= user.email %></p>
 
-      <strong>Distance: <%= Geocoder::Calculations.distance_between(user, current_user).round(2)%> Km</strong>
+      <strong >Distance: <%= Geocoder::Calculations.distance_between(user, current_user).round(2)%> Km</strong>
     </div>
     <div class="col-lg-8 book-users-Index hidden-xs hidden-sm">
       <%= render collection: user.books.limit(4), partial:'books/book', locals: { book_class: "col-md-3" } %>
