@@ -1,7 +1,9 @@
 .stat {
+  display: none;
   transform: translateY(200px);
 }
 .stat-display {
+  display:block;
   height: 60px;
   display: block;
   position: fixed;
