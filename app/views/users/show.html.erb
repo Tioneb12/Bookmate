@@ -18,7 +18,7 @@
   </div>
   <div class="container">
     <% if @user != current_user %>
-      <h2 class="color-section">Recommandations</h2><hr style="line-height: 5px;">
+      <h2 class="color-section">Recommandations</h2><hr>
     <%end%>
     <div class= "row">
       <%= render collection: @user.books - current_user.books, partial:'books/book' %>
