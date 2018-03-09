@@ -226,12 +226,12 @@ puts "Books finished"
 puts "Create Users"
 
 u1 = User.create!(
-  first_name: "Binoum",
+  first_name: "Binyoum",
   last_name: "jojo",
   address: "8 place Tartas 33000 Bordeaux",
   password: "123456",
   email: "jojo@yop.com",
-  remote_avatar_url: "https://randomuser.me/api/portraits/men/32.jpg"
+  remote_avatar_url: "https://avatars3.githubusercontent.com/u/33312886?s=400&u=26a12e10ea82d7f70d984c774f02c29d2394195c&v=4"
   )
 u2 = User.create!(
   first_name: "Zeller",

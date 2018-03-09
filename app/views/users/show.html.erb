@@ -18,12 +18,12 @@
   </div>
   <div class="container">
     <% if @user != current_user %>
-      <h2 class="color-section">Recommend</h2><hr>
+      <h2 class="color-section">Recommandations</h2><hr style="line-height: 5px;">
     <%end%>
     <div class= "row">
       <%= render collection: @user.books - current_user.books, partial:'books/book' %>
     </div>
-    <h2 class="color-section">Library</h2><hr>
+    <h2 class="color-section">Librairie</h2><hr>
     <div class= "row">
         <%= render collection: @user.books, partial:'books/book', locals: { current_user_profile: @user == current_user } %>
     </div>
